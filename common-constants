@@ -1,0 +1,37 @@
+
+# -------------------------------------------------------------------------------
+# Filename:    common-constants 
+# Version:     1.0
+# Date:        2018-11-07
+# Author:      LiuBaoWen
+# Email:       bwliush@cn.ibm.com
+# Description: 
+# Notes:       
+# -------------------------------------------------------------------------------
+
+#app路径
+app_dir='/opt/app'
+
+#netty项目路径
+nettyDir='/opt/app/netty'
+
+#tomcat项目路径
+tomcatDir='/opt/app/tomcat'
+
+#缓存目录
+temp_dir='temp'
+
+#运行目录
+run_dir='run'
+
+#备份目录
+backup_dir='backup'
+
+#项目端口配置文件
+appPortConfig='/opt/app/appPort.properties'
+
+#发布日志目录
+log_dir='/opt/logs'
+
+#发布日志目录
+release_log='release'
