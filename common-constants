@@ -13,16 +13,25 @@
 app_dir='/opt/app'
 
 #netty项目路径
-nettyDir='/opt/app/netty'
+netty_app_dir='/opt/app/netty'
 
 #tomcat项目路径
-tomcatDir='/opt/app/tomcat'
+tomcat_app_dir='/opt/app/tomcat'
+
+#netty-log
+netty_log_dir='/opt/logs/netty/'
+
+#tomcat-log
+tomcat_log_dir='opt/logs/tomcat'
 
 #缓存目录
 temp_dir='temp'
 
 #运行目录
-run_dir='run'
+run_dir='running'
+
+#脚本目录
+script_dir='script'
 
 #备份目录
 backup_dir='backup'
