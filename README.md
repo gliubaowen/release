@@ -16,6 +16,11 @@ javaEE 项目发布步骤
 
 依赖: jdk, maven or gradle, nexus
 
+构建命令示例
+clean install -P pre -U
+
+发布netty项目脚本 示例
 /opt/app/netty/start-monitor1.sh member/member-admin member-admin
 
+发布tomcat项目脚本 示例
 /opt/app/server/start-monitor1.sh osp-campaign-web
