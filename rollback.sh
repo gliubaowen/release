@@ -6,21 +6,9 @@
 # Date:        2018-11-07
 # Author:      LiuBaoWen
 # Email:       bwliush@cn.ibm.com
-# Description: 
+# Description: 回滚应用
 # Notes:       
 # -------------------------------------------------------------------------------
-
-#一，编译项目源码
-#
-#二，停止旧的应用
-#
-#三，备份旧的应用
-#
-#四，移动新应用，启动新应用
-#
-#五，检查是否启动成功
-#
-#六，启动成功则结束，启动失败则回滚
 
 workspaces=$(dirname "$0")
 
@@ -29,5 +17,8 @@ workspaces=$(dirname "$0")
 #项目名
 app=$1
 
-
+#停止发布失败应用
+./stop-app.sh
+#启动原来应用
+./start-app.sh
 

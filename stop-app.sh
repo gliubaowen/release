@@ -6,7 +6,7 @@
 # Date:        2018-11-07
 # Author:      LiuBaoWen
 # Email:       bwliush@cn.ibm.com
-# Description: 
+# Description: 停止应用
 # Notes:       
 # -------------------------------------------------------------------------------
 
@@ -29,5 +29,5 @@ workspaces=$(dirname "$0")
 #项目名
 app=$1
 
-
+kill -9 
 

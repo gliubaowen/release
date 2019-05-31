@@ -2,11 +2,11 @@
 
 # -------------------------------------------------------------------------------
 # Filename:    initialize.sh 
-# Version:     2.0.0
-# Date:        2019-02-18
+# Version:     1.0.0
+# Date:        2019-05-31
 # Author:      LiuBaoWen
 # Email:       bwliush@cn.ibm.com
-# Description: 初始化项目
+# Description: 初始化项目 创建发布环境
 # Notes:       
 # -------------------------------------------------------------------------------
 
@@ -15,13 +15,14 @@ workspaces=$(dirname "$0")
 
 . ${workspaces}/common-constants
 
-#创建需要的用户
+:<<'COMMENT'
 sed -i '$a 67.219.148.138 mirrorlist.centos.org' /etc/hosts
 sed -i '$a 115.28.122.210 mirrors.aliyun.com' /etc/hosts
 sed -i '$a 202.141.176.110 centos.ustc.edu.cn' /etc/hosts
 sed -i '$a 193.219.28.2 ftp.icm.edu.pl' /etc/hosts
 sed -i '$a 119.188.36.70 mirrors.sohu.com' /etc/hosts
 sed -i '$a 218.104.71.170 mirrors.sohu.com' /etc/hosts
+COMMENT
 
 #创建发布使用的用户
 #netty
