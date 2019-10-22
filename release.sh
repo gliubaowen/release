@@ -23,6 +23,8 @@ fi
 #项目名
 app_name=$1
 
+bash update-src.sh
+
 #一，编译项目源码
 bash compile.sh $app_name
 
