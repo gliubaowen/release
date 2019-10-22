@@ -26,31 +26,38 @@ COMMENT
 
 #创建发布使用的用户
 #netty
-sudo useradd netty && echo 'netty@text' | passwd --stdin netty
+#sudo useradd netty && echo 'netty@text' | passwd --stdin netty
 #tomcat
-sudo useradd tomcat && echo 'tomcat@text' | passwd --stdin tomcat
+#sudo useradd tomcat && echo 'tomcat@text' | passwd --stdin tomcat
 
 #创建发布使用的目录结构
 #netty
-mkdir -p $netty_app_dir
-mkdir -p $netty_app_dir/$script_dir
-mkdir -p $netty_app_dir/$run_dir
-mkdir -p $netty_app_dir/$backup_dir
-mkdir -p $netty_app_dir/$temp_dir
-chown -R netty:netty $netty_app_dir && chmod -R 755 $netty_app_dir
+#mkdir -p $netty_app_dir
+#mkdir -p $netty_app_dir/$script_dir
+#mkdir -p $netty_app_dir/$run_dir
+#mkdir -p $netty_app_dir/$backup_dir
+#mkdir -p $netty_app_dir/$temp_dir
+#chown -R netty:netty $netty_app_dir && chmod -R 755 $netty_app_dir
 #tomcat
-mkdir -p $tomcat_app_dir
-mkdir -p $tomcat_app_dir/$script_dir
-mkdir -p $tomcat_app_dir/$run_dir
-mkdir -p $tomcat_app_dir/$backup_dir
-mkdir -p $tomcat_app_dir/$temp_dir
-chown -R tomcat:tomcat $tomcat_app_dir && chmod -R 755 $tomcat_app_dir
+#mkdir -p $tomcat_app_dir
+#mkdir -p $tomcat_app_dir/$script_dir
+#mkdir -p $tomcat_app_dir/$run_dir
+#mkdir -p $tomcat_app_dir/$backup_dir
+#mkdir -p $tomcat_app_dir/$temp_dir
+#chown -R tomcat:tomcat $tomcat_app_dir && chmod -R 755 $tomcat_app_dir
 
 #创建日志目录
 #netty
-mkdir -p $netty_log_dir && chown -R netty:netty $netty_log_dir && chmod -R 755 $netty_log_dir
+#mkdir -p $netty_log_dir && chown -R netty:netty $netty_log_dir && chmod -R 755 $netty_log_dir
 #tomcat
-mkdir -p $tomcat_log_dir && chown -R tomcat:tomcat $tomcat_log_dir && chmod -R 755 $tomcat_log_dir
+#mkdir -p $tomcat_log_dir && chown -R tomcat:tomcat $tomcat_log_dir && chmod -R 755 $tomcat_log_dir
+
+#创建发布使用的目录结构
+mkdir -p $app_dir
+mkdir -p $log_dir/$release_log
+mkdir -p $app_dir/$temp_dir
+mkdir -p $app_dir/$run_dir
+mkdir -p $app_dir/$backup_dir
 
 #使用yum安装使用的软件
 yum install --nogpgcheck wget
