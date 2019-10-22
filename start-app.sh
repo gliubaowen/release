@@ -14,11 +14,14 @@ workspaces=$(dirname "$0")
 
 . $workspaces/common-constants
 
+export LANG="en_US.UTF-8"
+
 #项目名
 app=$1
 
-export LANG="en_US.UTF-8"
+#进入项目目录
+cp $app_dir/$temp_dir/$app/target/$app*.jar $app_dir/$temp_dir/$app/$run_dir/
 
-nohup java -jar 
+java -jar $app_dir/$temp_dir/$app/$run_dir/$app*.j
 
 
