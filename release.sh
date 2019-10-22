@@ -29,7 +29,7 @@ bash update-src.sh $app_name
 bash compile.sh $app_name
 
 #二，停止旧的应用
-bash stop.sh $app_name
+bash stop-app.sh $app_name
 
 #三，备份旧的应用
 #bash backup.sh $app_name
