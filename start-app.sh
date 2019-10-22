@@ -20,8 +20,10 @@ export LANG="en_US.UTF-8"
 app=$1
 
 #进入项目目录
-cp $app_dir/$temp_dir/$app/target/$app*.jar $app_dir/$temp_dir/$app/$run_dir/
+mkdir -p $app_dir/$run_dir/$app
 
-java -jar $app_dir/$temp_dir/$app/$run_dir/$app*.j
+cp $app_dir/$temp_dir/$app/target/$app*.jar $app_dir/$run_dir/$app/
+
+java -jar $app_dir/$run_dir/$app/$app*.jar
 
 
