@@ -19,5 +19,6 @@ app=$1
 
 export LANG="en_US.UTF-8"
 
-java -jar 
+nohup java -jar 
+
 
