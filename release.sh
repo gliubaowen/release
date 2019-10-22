@@ -24,20 +24,20 @@ fi
 app_name=$1
 
 #一，编译项目源码
-./compile.sh $app_name
+bash compile.sh $app_name
 
 #二，停止旧的应用
-./stop.sh $app_name
+bash stop.sh $app_name
 
 #三，备份旧的应用
-./backup.sh $app_name
+#bash backup.sh $app_name
 
 #四，移动新应用，启动新应用
-./start-app.sh $app_name
+bash start-app.sh $app_name
 
 #五，检查是否启动成功
-./monitor.sh $app_name
+#bash monitor.sh $app_name
 
 #六，启动成功则结束，启动失败则回滚
-./rollback.sh $app_name
+#bash rollback.sh $app_name
 

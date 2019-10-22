@@ -29,5 +29,5 @@ workspaces=$(dirname "$0")
 #项目名
 app=$1
 
-kill -9 
+jps | grep $1 | grep -v grep | cut -c 1-5 | xargs kill -9
 

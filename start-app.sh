@@ -24,6 +24,6 @@ mkdir -p $app_dir/$run_dir/$app
 
 cp $app_dir/$temp_dir/$app/target/$app*.jar $app_dir/$run_dir/$app/
 
-java -jar $app_dir/$run_dir/$app/$app*.jar
+echo exit | nohup java -jar $app_dir/$run_dir/$app/$app*.jar > $log_dir/$release_log/nohup.out &
 
 
