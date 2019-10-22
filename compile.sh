@@ -14,10 +14,12 @@ workspaces=$(dirname "$0")
 
 . $workspaces/common-constants
 
+
 #项目名
 app=$1
 
 #进入项目目录
-cd 
+cd $app_dir/$temp_dir/$app
+
 #build 项目源码
 mvn compile
