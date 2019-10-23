@@ -24,3 +24,5 @@ clean install -P pre -U
 
 发布tomcat项目脚本 示例
 /opt/app/server/start-monitor1.sh osp-campaign-web
+
+后续需要集成 docker k8s oc 

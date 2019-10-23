@@ -1,27 +1,27 @@
 #!/bin/bash
 
-# -------------------------------------------------------------------------------
+###############################################
 # Filename:    public_function.sh
 # Version:     2.0
-# Date:        2018-11-20
+# Date:        2019-10-23
 # Author:      LiuBaoWen
 # Email:       bwliush@cn.ibm.com
 # Description: 常用的公共方法
 # Notes:       
-# -------------------------------------------------------------------------------
+###############################################
 
 workspaces=$(dirname "$0")
 
 . ${workspaces}/common-constants
 
 #配置文件
-#appNameConfig="/opt/app/appName.properties"
-echo "[info] 配置文件为:${appNameConfig}"
+#geodeConfig="/opt/app/geode.properties"
+echo "[info] 配置文件为:${geodeConfig}"
 
 #读取文件关键字
 cfm_prop(){
 	arg1=$1
-	echo `sed -n "/$arg1=/"p ${appNameConfig} | sed "s/${arg1}=//"`
+	echo `sed -n "/$arg1=/"p ${geodeConfig} | sed "s/${arg1}=//"`
 }
 
 #检查配置文件
@@ -29,17 +29,17 @@ check_conf()
 {
 echo -e '\n[info]====================校验配置文件开始===================='
 
-	if [ -f ${appNameConfig} ] ; then
-		echo "[success] 配置文件: ${appNameConfig} 存在"
+	if [ -f ${geodeConfig} ] ; then
+		echo "[success] 配置文件: ${geodeConfig} 存在"
 	else
-		echo "[error]   配置文件: ${appNameConfig} 未找到"
+		echo "[error]   配置文件: ${geodeConfig} 未找到"
 		exit 1
 	fi
 	
-	if [ -s ${appNameConfig} ] ; then
-		echo "[success] 配置文件: ${appNameConfig} 正常"
+	if [ -s ${geodeConfig} ] ; then
+		echo "[success] 配置文件: ${geodeConfig} 正常"
 	else
-		echo "[error]   配置文件: ${appNameConfig} 为空"
+		echo "[error]   配置文件: ${geodeConfig} 为空"
 		exit 2
 	fi
 	

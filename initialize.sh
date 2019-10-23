@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# -------------------------------------------------------------------------------
+###############################################
 # Filename:    initialize.sh 
 # Version:     1.0.0
-# Date:        2019-05-31
+# Date:        2019-10-23
 # Author:      LiuBaoWen
 # Email:       bwliush@cn.ibm.com
 # Description: 初始化项目 创建发布环境
 # Notes:       
-# -------------------------------------------------------------------------------
+###############################################
 
 #工作空间
 workspaces=$(dirname "$0")
@@ -67,3 +67,4 @@ yum install --nogpgcheck python
 yum install --nogpgcheck lsof
 yum install --nogpgcheck telnet
 
+echo $?

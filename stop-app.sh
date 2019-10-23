@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# -------------------------------------------------------------------------------
+###############################################
 # Filename:    stop-app.sh
 # Version:     0.1
-# Date:        2018-11-07
+# Date:        2019-10-23
 # Author:      LiuBaoWen
 # Email:       bwliush@cn.ibm.com
 # Description: 停止应用
 # Notes:       
-# -------------------------------------------------------------------------------
+###############################################
 
 #一，编译项目源码
 #
@@ -27,7 +27,8 @@ workspaces=$(dirname "$0")
 . $workspaces/common-constants
 
 #项目名
-app=$1
+app_name=$1
 
-jps | grep $1 | grep -v grep | cut -c 1-5 | xargs kill -9
+jps | grep $app_name | grep -v grep | cut -c 1-5 | xargs kill -9
 
+echo $?

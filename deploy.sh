@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# -------------------------------------------------------------------------------
+###############################################
 # Filename:    deploy.sh 
 # Version:     0.1
-# Date:        2019-05-31
+# Date:        2019-10-23
 # Author:      LiuBaoWen
 # Email:       bwliush@cn.ibm.com
 # Description: 部署应用
 # Notes:       
-# -------------------------------------------------------------------------------
+###############################################
 
 #一，编译项目源码
 #
@@ -24,3 +24,14 @@
 
 export LANG="en_US.UTF-8"
 
+#项目名
+app_name=$1
+
+cd $app_dir/$temp_dir/$app_name
+
+bash update-src.sh $app_name
+
+#一，部署项目
+mvn deploy -DskipTests
+
+echo $?
