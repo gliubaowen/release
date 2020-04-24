@@ -3,7 +3,7 @@
 ###############################################
 # Filename:    initialize.sh 
 # Version:     1.0.0
-# Date:        2019-10-23
+# Date:        2020-04-24
 # Author:      LiuBaoWen
 # Email:       bwliush@cn.ibm.com
 # Description: 初始化项目 创建发布环境
@@ -52,6 +52,8 @@ COMMENT
 #tomcat
 #mkdir -p $tomcat_log_dir && chown -R tomcat:tomcat $tomcat_log_dir && chmod -R 755 $tomcat_log_dir
 
+echo "初始化发布开始"
+
 #创建发布使用的目录结构
 mkdir -p $app_dir
 mkdir -p $log_dir/$release_log
@@ -68,3 +70,5 @@ yum install --nogpgcheck lsof
 yum install --nogpgcheck telnet
 
 echo $?
+
+echo "初始化发布完成"

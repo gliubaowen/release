@@ -3,7 +3,7 @@
 ###############################################
 # Filename:    monitor.sh
 # Version:     0.1
-# Date:        2019-10-23
+# Date:        2020-04-24
 # Author:      LiuBaoWen
 # Email:       bwliush@cn.ibm.com
 # Description: 监视应用是否发布成功
@@ -17,6 +17,10 @@ workspaces=$(dirname "$0")
 #项目名
 app_name=$1
 
+echo "开始"
+
 export LANG="en_US.UTF-8"
 
 echo $?
+
+echo "完成"
